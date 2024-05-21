@@ -1,7 +1,7 @@
 # セルフチェック
-- [ ] [PRガイドライン](https://github.com/tomo1227/template_golang/blame/main/README.md#pull-request-%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3)を守っている
+- [ ] [PRガイドライン](https://github.com/tomo1227/python_template/blame/main/README.md#pull-request-%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3)を守っている
 - [ ] ローカルでビルド、テストが通っている
-- [ ] [Godoc](https://pkg.go.dev/golang.org/x/tools/cmd/godoc)に沿って実装できている
+- [ ] [pep8](https://pep8-ja.readthedocs.io/ja/latest/)に沿って実装できている
 - [ ] ドキュメント化ができている
 
 # 目的
