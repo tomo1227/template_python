@@ -24,7 +24,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "2:35"
+      time: "02:42"
       timezone: "Asia/Tokyo"
     allow:
       - dependency-type: "all"
