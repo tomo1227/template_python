@@ -6,11 +6,6 @@ updates:
       interval: daily
 
   - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-
-  - package-ecosystem: "docker"
     directory: "/.devcontainer"
     schedule:
       interval: "weekly"
@@ -24,7 +19,4 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "02:43"
-      timezone: "Asia/Tokyo"
-    allow:
-      - dependency-type: "all"
+  versioning-strategy: auto
