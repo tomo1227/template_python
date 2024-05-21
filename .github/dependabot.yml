@@ -23,7 +23,9 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+      time: "2:40"
+      timezone: "Asia/Tokyo"
     commit-message:
       prefix: "build👷 "
 
