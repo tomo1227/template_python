@@ -30,8 +30,9 @@ exclude = [
 line-length = 120
 indent-width = 4
 
-select = ["E"]
-ignore = ["D415"]
+ignore = ["D415", "E203"]
+
+select = ["N", "E", "W", "D", "F", "I", "C90", "S"]
 
 [tool.ruff.pydocstyle]
 convention = "google"
