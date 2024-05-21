@@ -21,8 +21,8 @@ updates:
       interval: "weekly"
 
   - package-ecosystem: "pip"
-    directory: "/app"
+    directory: "/"
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "build👷 [app]"
+      prefix: "build👷 "
