@@ -28,7 +28,7 @@
                 },
                 "ruff.organizeImports": true,
                 "ruff.format.args": [
-                    "--config=pyproject.toml"
+                    "--config=app/pyproject.toml"
                 ],
                 "editor.codeActionsOnSave": {
                     "source.organizeImports": "explicit",
