@@ -21,8 +21,10 @@ updates:
       interval: "weekly"
 
   - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/genai_api" # Location of package manifests
+    directory: "/app" # Location of package manifests
     schedule:
-      interval: "weekly"
+      interval: "daily"
+      time: "01:57"
+      timezone: "Asia/Tokyo"
     commit-message:
-      prefix: "build(deps): 🤖[genai]"
+      prefix: "build🤖 []"
