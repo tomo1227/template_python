@@ -25,4 +25,4 @@ updates:
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "build🤖 [app]"
+      prefix: "build👷 [app]"
