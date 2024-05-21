@@ -19,4 +19,4 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    versioning-strategy: lockfile-only
+    versioning-strategy: auto
