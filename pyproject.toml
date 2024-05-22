@@ -52,7 +52,7 @@ authors = ["tomo1227"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11.1"
+python = "^3.12"
 
 
 [build-system]
