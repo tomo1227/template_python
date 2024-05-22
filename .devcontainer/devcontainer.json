@@ -8,12 +8,10 @@
     "workspaceFolder": "/workspace",
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
-            "version": "latest"
-        },
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "latest"
+            "version": "3.12.3"
         }
     },
+    "forwardPorts": [],
     "postCreateCommand": "sh .devcontainer/scripts/post_create.sh",
     "postStartCommand": "sh .devcontainer/scripts/post_start.sh ${containerWorkspaceFolder}",
     "customizations": {
