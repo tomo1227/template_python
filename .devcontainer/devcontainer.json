@@ -1,8 +1,7 @@
 {
     "name": "python_template",
     "dockerComposeFile": [
-        "../compose.yml",
-        "compose.yml"
+        "../compose.yml"
     ],
     "service": "devcontainer",
     "workspaceFolder": "/workspace",
@@ -41,7 +40,28 @@
                     "--disallow-untyped-defs"
                     // "--config-file=<file>"
                 ],
-                "mypy-type-checker.importStrategy": "fromEnvironment"
+                "mypy-type-checker.importStrategy": "fromEnvironment",
+                "[yaml]": {
+					"editor.defaultFormatter": "redhat.vscode-yaml",
+					"editor.insertSpaces": true,
+					"editor.tabSize": 2,
+					"editor.formatOnSave": true,
+					"files.insertFinalNewline": true
+				},
+				"[json]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode",
+					"editor.insertSpaces": true,
+					"editor.tabSize": 2,
+					"editor.formatOnSave": true,
+					"files.insertFinalNewline": true
+				},
+                "[toml]": {
+					"editor.defaultFormatter": "tamasfe.even-better-toml",
+					"editor.insertSpaces": true,
+					"editor.tabSize": 2,
+					"editor.formatOnSave": true,
+					"files.insertFinalNewline": true
+				}
             },
             "extensions": [
                 // python関連
@@ -50,6 +70,10 @@
                 "njpwerner.autodocstring",
                 "charliermarsh.ruff",
                 "littlefoxteam.vscode-python-test-adapter",
+                // json, yaml, toml formatter
+				"esbenp.prettier-vscode",
+				"redhat.vscode-yaml",
+                "tamasfe.even-better-toml",
                 // Git関連
                 "GitHub.vscode-pull-request-github",
                 "github.vscode-github-actions",
