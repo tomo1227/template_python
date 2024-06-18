@@ -1,94 +1,62 @@
 {
-    "name": "python_template",
-    "dockerComposeFile": [
-        "../compose.yml"
-    ],
-    "service": "devcontainer",
-    "workspaceFolder": "/workspace",
-    "features": {
-        "ghcr.io/devcontainers/features/python:1": {
-            "version": "3.12.3"
-        }
-    },
-    "forwardPorts": [],
-    "postCreateCommand": "sh .devcontainer/scripts/post_create.sh",
-    "postStartCommand": "sh .devcontainer/scripts/post_start.sh ${containerWorkspaceFolder}",
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "editor.guides.bracketPairs": true,
-                "editor.formatOnSave": true,
-                "[python]": {
-                    "editor.formatOnSave": true,
-                    "editor.defaultFormatter": "charliermarsh.ruff",
-                    "editor.formatOnPaste": true,
-                    "editor.formatOnType": true,
-                    "editor.tabSize": 4,
-                    "editor.insertSpaces": true
-                },
-                "ruff.organizeImports": true,
-                "ruff.format.args": [
-                    "--config=app/pyproject.toml"
-                ],
-                "editor.codeActionsOnSave": {
-                    "source.organizeImports": "explicit",
-                    "source.fixAll.ruff": "explicit",
-                    "source.organizeImports.ruff": "explicit"
-                },
-                "mypy-type-checker.args": [
-                    "--ignore-missing-imports",
-                    "--disallow-untyped-defs"
-                    // "--config-file=<file>"
-                ],
-                "mypy-type-checker.importStrategy": "fromEnvironment",
-                "[yaml]": {
-					"editor.defaultFormatter": "redhat.vscode-yaml",
-					"editor.insertSpaces": true,
-					"editor.tabSize": 2,
-					"editor.formatOnSave": true,
-					"files.insertFinalNewline": true
-				},
-				"[json]": {
-					"editor.defaultFormatter": "esbenp.prettier-vscode",
-					"editor.insertSpaces": true,
-					"editor.tabSize": 2,
-					"editor.formatOnSave": true,
-					"files.insertFinalNewline": true
-				},
-                "[toml]": {
-					"editor.defaultFormatter": "tamasfe.even-better-toml",
-					"editor.insertSpaces": true,
-					"editor.tabSize": 2,
-					"editor.formatOnSave": true,
-					"files.insertFinalNewline": true
-				}
-            },
-            "extensions": [
-                // python関連
-                "ms-python.python",
-                "ms-python.mypy-type-checker",
-                "njpwerner.autodocstring",
-                "charliermarsh.ruff",
-                "littlefoxteam.vscode-python-test-adapter",
-                // json, yaml, toml formatter
-				"esbenp.prettier-vscode",
-				"redhat.vscode-yaml",
-                "tamasfe.even-better-toml",
-                // Git関連
-                "GitHub.vscode-pull-request-github",
-                "github.vscode-github-actions",
-                "mhutchie.git-graph",
-                "eamodio.gitlens",
-                "donjayamanne.githis",
-                "github.vscode-github-actions",
-                // その他
-                "streetsidesoftware.code-spell-checker",
-                "tamasfe.even-better-toml",
-                "Gruntfuggly.todo-tree",
-                "seatonjiang.gitmoji-vscode",
-                "oderwat.indent-rainbow",
-                "pkief.material-icon-theme"
-            ]
-        }
+  "name": "${localWorkspaceFolderBasename}",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  "dockerComposeFile": ["../compose.yml"],
+  "forwardPorts": [8080],
+  "remoteUser": "vscode",
+  "remoteEnv": {
+    "USE_DEV_CONTAINER": "true",
+    "PIPENV_VENV_IN_PROJECT": "false",
+    "PIP_DEFAULT_TIMEOUT": "100" // デフォルト(15秒)だとタイムアウトする場合があるので設定
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12.3"
     }
+  },
+  "postCreateCommand": "sh .devcontainer/scripts/post_create.sh",
+  "postStartCommand": "sh .devcontainer/scripts/post_start.sh ${containerWorkspaceFolder}",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/python/current/bin/python",
+        "python.terminal.activateEnvironment": false,
+        "python.testing.pytestPath": "/usr/local/py-utils/bin/pytest"
+      },
+      "extensions": [
+        // python関連
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "ms-python.mypy-type-checker",
+        "littlefoxteam.vscode-python-test-adapter",
+        "njpwerner.autodocstring",
+        "KevinRose.vsc-python-indent",
+        // json, yaml, toml formatter
+        "esbenp.prettier-vscode",
+        "redhat.vscode-yaml",
+        "tamasfe.even-better-toml",
+        // Git関連
+        "GitHub.vscode-pull-request-github",
+        "github.vscode-github-actions",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "donjayamanne.githis",
+        "github.vscode-github-actions",
+        // markdown
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "bierner.github-markdown-preview",
+        // その他
+        "streetsidesoftware.code-spell-checker",
+        "naumovs.color-highlight",
+        "Gruntfuggly.todo-tree",
+        "oderwat.indent-rainbow",
+        "ms-vscode.live-server",
+        "shardulm94.trailing-spaces",
+        "usernamehw.errorlens",
+        "ryanluker.vscode-coverage-gutters"
+      ]
+    }
+  }
 }
