@@ -20,13 +20,7 @@
     "files.insertFinalNewline": true
   },
   "ruff.organizeImports": true,
-  "ruff.format.args": ["--config=app/pyproject.toml"],
-  "python.testing.pytestArgs": [
-    ".",
-    "--ds=iam.settings.testing",
-    // NOTE: カバレッジを出力するとdebugできない
-    "--no-cov"
-  ],
+  "ruff.format.args": ["--config=pyproject.toml"],
   "coverage-gutters.showGutterCoverage": true,
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.showRulerCoverage": true,
@@ -48,8 +42,8 @@
   ],
   "python.languageServer": "Pylance",
   "python.analysis.indexing": true,
+  "python.testing.pytestArgs": ["tests"],
   "python.analysis.packageIndexDepths": [
-    // NOTE: 一部のライブラリではstubのインストールが必要
     {
       "name": "",
       "depth": 10,

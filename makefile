@@ -1,6 +1,6 @@
 # テスト　&カバレッジ(XML)　VSCode上で可視化できる。
 .PHONY: test
-cov:
+test:
 	pytest src -n auto --cov=./ --cov-config=.coveragerc --cov-report=term-missing --cov-report=xml
 
 # コンテナの削除(ローカルでのみ)
