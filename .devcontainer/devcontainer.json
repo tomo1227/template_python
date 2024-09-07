@@ -7,12 +7,21 @@
   "remoteUser": "vscode",
   "remoteEnv": {
     "USE_DEV_CONTAINER": "true",
-    "PIPENV_VENV_IN_PROJECT": "false",
-    "PIP_DEFAULT_TIMEOUT": "100" // デフォルト(15秒)だとタイムアウトする場合があるので設定
+    "PIP_DEFAULT_TIMEOUT": "100", // デフォルト(15秒)だとタイムアウトする場合があるので設定
+    // "PATH": "${containerEnv:PATH}:/home/vscode/.rye/env",
+    "UV_HTTP_TIMEOUT": "100",
+    "UV_SYSTEM_PYTHON": "true"
   },
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.12.3"
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "vscode",
+      "userUid": "automatic",
+      "userGid": "automatic",
+      "upgradePackages": "true"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest",
+      "ppa": "false"
     }
   },
   "postCreateCommand": "sh .devcontainer/scripts/post_create.sh",
@@ -20,11 +29,10 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "python.defaultInterpreterPath": "/usr/local/python/current/bin/python",
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
         "python.terminal.activateEnvironment": false,
-        "python.testing.pytestPath": "/usr/local/py-utils/bin/pytest",
-        "python.pipenvPath": "/usr/local/py-utils/bin/pipenv",
-        "ruff.interpreter": ["/usr/local/python/current/bin/python"]
+        // "python.testing.pytestPath": "/usr/local/py-utils/bin/pytest",
+        "ruff.interpreter": ["/usr/local/bin/python"]
       },
       "extensions": [
         // python関連
