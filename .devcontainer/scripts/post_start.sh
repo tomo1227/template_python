@@ -19,4 +19,4 @@ pip install --no-cache-dir poetry
 
 poetry config virtualenvs.create false
 
-poetry install
+poetry install --no-root
