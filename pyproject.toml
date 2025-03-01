@@ -33,13 +33,13 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pytest = "^8.3.3"
+pytest = "^8.3.4"
 pytest-cov = "^6.0.0"
 pytest-xdist = "^3.6.1"
 pytest-mock = "^3.14.0"
-ruff = "^0.7.1"
-fastapi = "^0.115.2"
-uvicorn = "^0.32.0"
+ruff = "^0.9.9"
+fastapi = "^0.115.7"
+uvicorn = "^0.34.0"
 
 [build-system]
 requires = ["poetry-core"]
