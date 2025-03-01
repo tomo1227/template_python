@@ -7,13 +7,8 @@
   "remoteUser": "vscode",
   "remoteEnv": {
     "USE_DEV_CONTAINER": "true",
-    "PIP_DEFAULT_TIMEOUT": "100" // デフォルト(15秒)だとタイムアウトする場合があるので設定
-  },
-  "containerEnv": {
-    "PYTHON_PATH": "/usr/local/vscode/python/current/bin/",
-    // "PIPX_HOME": "/usr/local/py-utils",
-    // "PIPX_BIN_DIR": "/usr/local/py-utils/bin",
-    "PATH": "/usr/local/python/current/bin:${PATH}"
+    "PIP_DEFAULT_TIMEOUT": "100", // デフォルト(15秒)だとタイムアウトする場合があるので設定
+    "POETRY_REQUESTS_TIMEOUT": "100"
   },
   "features": {
     "ghcr.io/devcontainers/features/python": {
@@ -39,7 +34,7 @@
         "python.defaultInterpreterPath": "/usr/local/vscode/python/current/bin/",
         "python.terminal.activateEnvironment": false,
         "python.testing.pytestPath": "/usr/local/vscode/python/current/bin/pytest",
-        "ruff.interpreter": ["/usr/local/vscode/python/current/bin/ruff"]
+        "ruff.path": ["/usr/local/vscode/python/current/bin/ruff"]
       },
       "extensions": [
         // python関連
