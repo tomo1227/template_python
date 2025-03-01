@@ -16,7 +16,7 @@ up:
 # コンテナの削除(ローカルでのみ)
 .PHONY: down
 down:
-	docker-compose down --rmi all --volumes --remove-orphans
+	docker compose down --rmi all --volumes --remove-orphans
 
 # 推奨拡張機能の一括インストール
 .PHONY: ext

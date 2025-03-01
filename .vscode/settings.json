@@ -20,7 +20,6 @@
     "files.insertFinalNewline": true
   },
   "ruff.organizeImports": true,
-  "ruff.format.args": ["--config=pyproject.toml"],
   "coverage-gutters.showGutterCoverage": true,
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.showRulerCoverage": true,
